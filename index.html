@@ -124,7 +124,7 @@
     </script>
 
     <script type="text/plain" id="default-elev-implementation">
-    // Everything inside the function below tells elevator(s) what to do:
+    // Everything inside the function below tells elevators what to do:
 
 function(elevatorsArray, floorsArray) {
   // This function takes 2 pieces of information: an array of elevators and an
@@ -135,20 +135,10 @@ function(elevatorsArray, floorsArray) {
   // This takes the first elevator of the array and saves it as the variable
   // firstElevator.
 
-  firstElevator.on("floor_button_pressed", function(number){
-  });
-
-
-  // this forEach function performs actions on each of the floor objects in the
-  // floorsArray:
-  floorsArray.forEach(function(floor){
-    floor.on("down_button_pressed", function(){
-      firstElevator.goToFloor( floor.number() );
-    });
-
-    floor.on("up_button_pressed", function(){
-      firstElevator.goToFloor( floor.number() );
-    });
+  firstElevator.on("idle", function(){
+    firstElevator.goToFloor(1);
+    firstElevator.goToFloor(2);
+    firstElevator.goToFloor(3);
   });
 
   // The elevator doesn't seem to be working right, and it's your job to fix it.
