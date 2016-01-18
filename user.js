@@ -42,7 +42,8 @@ User.prototype.handleExit = function(floorNum, elevator) {
             self.trigger("removed");
             self.off("*");
         });
-
+        var cashSound = new Audio('cash.mp3');
+        cashSound.play();
         elevator.off("exit_available", this.exitAvailableHandler);
     }
 };
