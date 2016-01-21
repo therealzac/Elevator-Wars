@@ -23,3 +23,5 @@ Elevator Wars is a Javascript game that teaches people Javascript.
 - Tweaking difficulty.
 
 - Adding a challenge builder so that users can create and share custom challenges.
+
+Inspired by a game from Magnus Wolffelt.
